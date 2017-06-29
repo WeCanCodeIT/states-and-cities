@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>State Detail</title>
+</head>
+<body>
+<h1 th:text="${state.name}"></h1>
+	<ul>
+		<li th:each="city: ${state.cities}">
+		<a th:href= "@{/city(id=${city.id})}" th:text="${city.name}"></a>
+		</li>
+	</ul>
+</body>
+</html>
